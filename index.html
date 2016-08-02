@@ -1,15 +1,33 @@
 <!DOCTYPE html>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script> 
 <script src="index.js"></script>
 
-<body ng-app="calcApp">
-	<div ng-controller="calcCtrl as ctrl">
-		<input type="text"
-				placeholder="enter your name here"
-				ng-model="ctrl.inputName">
-		<h2> Hello, {{ctrl.inputName}} </h2>
-	
 
+<body ng-app="calcApp">
+	<h1> An online calculator using AngularJS</h1>
+	
+	<div ng-controller="calcCtrl as ctrl">
+		<label>Value 1:
+			<input type="number" ng-model="ctrl.value1">
+		</label>
+
+		<br><br>
+
+		<label>Value 2:
+			<input type="number" ng-model="ctrl.value2">
+		</label>
+
+		<br><br>
+
+		<button ng-click="ctrl.add()">+</button>
+		<button ng-click="ctrl.subtract()">-</button>
+		<button ng-click="ctrl.multiply()">*</button>
+		<button ng-click="ctrl.divide()">/</button>
+		<button ng-click="ctrl.reset()">reset</button>
+
+		<h3>Result: {{ctrl.result}}</h3>
 	</div>
 </body>
+
 </html>
