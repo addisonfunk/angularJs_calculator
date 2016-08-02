@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script> 
+<script src="index.js"></script>
+
+<body ng-app="calcApp">
+	<div ng-controller="calcCtrl as ctrl">
+		<input type="text"
+				placeholder="enter your name here"
+				ng-model="ctrl.inputName">
+		<h2> Hello, {{ctrl.inputName}} </h2>
+	
+
+	</div>
+</body>
+</html>
